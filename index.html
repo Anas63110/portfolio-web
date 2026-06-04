@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Md Anas Ansari</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">MA</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <p class="loader-text">Loading portfolio...</p>
+    </div>
+  </div>
+
+  <!-- SCROLL TO TOP -->
+  <button id="scroll-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8679;</button>
+
+  <!-- DESKTOP NAV -->
+  <nav id="desktop-nav">
+    <a href=""><div class="logo">Md Anas Ansari</div></a>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#timeline">Journey</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" title="Toggle dark/light mode">
+      <span class="theme-icon">🌙</span>
+    </button>
+  </nav>
+
+  <!-- HAMBURGER NAV -->
+  <nav id="hamburger-nav">
+    <div class="logo">Md Anas Ansari</div>
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <button class="theme-toggle" id="theme-toggle-mobile" title="Toggle theme">
+        <span class="theme-icon">🌙</span>
+      </button>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#timeline" onclick="toggleMenu()">Journey</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#testimonials" onclick="toggleMenu()">Reviews</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PROFILE SECTION -->
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/profile-pic.png" alt="Md Anas Ansari profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Md Anas Ansari</h1>
+      <p class="section__text__p2">
+        <span id="typed-text"></span><span class="cursor">|</span>
+      </p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/Md Anas Ansari CV.pdf')">Download CV</button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+      </div>
+      <div id="socials-container">
+        <a href="https://www.linkedin.com/in/md-anas-ansari/" target="_blank">
+          <img src="./assets/linkedin.png" alt="LinkedIn" class="icon" />
+        </a>
+        <a href="https://github.com/Anas63110" target="_blank">
+          <img src="./assets/github.png" alt="GitHub" class="icon" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="fade-in-section">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>1+ years <br />Frontend Development</p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>B.Tech <br />RKDF University<br />Ranchi, India</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            Software Engineering student at RKDF University, Ranchi, India, with expertise in HTML, CSS,
+            Bootstrap, JavaScript, WordPress, GitHub, and Flutter app development. Proven success in
+            collaborative project delivery, showcasing technical prowess and effective teamwork. A quick
+            learner and innovative problem-solver, committed to continuous improvement in web and mobile
+            development. Eager to contribute to innovative projects and explore impactful collaborations.
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+
+  <!-- EXPERIENCE / SKILLS WITH PROGRESS BARS -->
+  <section id="experience" class="fade-in-section">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container" style="flex:1;">
+          <h2 class="experience-sub-title">Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-label"><span>HTML</span><span class="skill-pct">95%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-label"><span>CSS</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-label"><span>JavaScript</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-label"><span>ReactJS</span><span class="skill-pct">70%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-label"><span>Flutter</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-label"><span>MongoDB</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-label"><span>WordPress</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-label"><span>Node.js</span><span class="skill-pct">65%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-label"><span>PHP</span><span class="skill-pct">45%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="45"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow" class="icon arrow" onclick="location.href='./#timeline'" />
+  </section>
+
+  <!-- TIMELINE SECTION -->
+
+  <br>
+  
+  <br />
+  <br />
+<br />
+<br />
+  
+  <section id="timeline" class="fade-in-section">
+    <p class="section__text__p1">My</p>
+    <h1 class="title">Journey</h1>
+    <div class="timeline">
+
+      <div class="timeline-item left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2023</span>
+          <h3>Started B.Tech</h3>
+          <p>Enrolled in Software Engineering at RKDF University, Ranchi.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2023</span>
+          <h3>Learned Web Basics</h3>
+          <p>Mastered HTML, CSS, and JavaScript through projects and self-study.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2024</span>
+          <h3>Explored Frameworks</h3>
+          <p>Picked up ReactJS, Flutter, and WordPress for full-stack and mobile development.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2025</span>
+          <h3>First Freelance Project</h3>
+          <p>Delivered a WordPress LMS site and a Flutter BMI app for clients.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2025 – Now</span>
+          <h3>Frontend Developer</h3>
+          <p>Building modern web apps with React and the MERN stack. Open to opportunities.</p>
+        </div>
+      </div>
+
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="fade-in-section">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="tab-container">
+      <button class="tab-button active" onclick="showTab('js-projects')">JavaScript</button>
+      <button class="tab-button" onclick="showTab('react-projects')">ReactJS</button>
+      <button class="tab-button" onclick="showTab('mern-projects')">MERN Stack</button>
+      <button class="tab-button" onclick="showTab('wordpress-projects')">WordPress</button>
+      <button class="tab-button" onclick="showTab('flutter-projects')">Flutter</button>
+    </div>
+    <div class="section-container">
+      <div id="js-projects" class="project-tab active">
+        <div class="card color-container">
+          <img src="./assets/random.png" alt="Random Meme" class="project-img" />
+          <h2 class="experience-sub-title project-title">Random Meme</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/mkabdulazees56/Random-meme-website?tab=readme-ov-file','_blank')">Live Demo</button>
+          </div>
+        </div>
+      </div>
+      <div id="react-projects" class="project-tab">
+        <div class="card color-container">
+          <img src="./assets/text.png" alt="TextUtils ReactJS" class="project-img" />
+          <h2 class="experience-sub-title project-title">TextUtils ReactJS</h2>
+          <div class="btn-container"></div>
+        </div>
+      </div>
+      <div id="mern-projects" class="project-tab">
+        <p style="color:var(--color-text);padding:2rem;">Coming soon...</p>
+      </div>
+      <div id="wordpress-projects" class="project-tab">
+        <div class="card color-container">
+          <img src="./assets/lms.png" alt="LMS WordPress" class="project-img" />
+          <h2 class="experience-sub-title project-title">LMS WordPress</h2>
+          <div class="btn-container"></div>
+        </div>
+      </div>
+      <div id="flutter-projects" class="project-tab">
+        <div class="card color-container">
+          <img src="./assets/BMI1.png" alt="BMI Calculator Flutter" class="project-img" />
+          <h2 class="experience-sub-title project-title">BMI Calculator | Flutter</h2>
+          <div class="btn-container"></div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow" class="icon arrow" onclick="location.href='./#testimonials'" />
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section id="testimonials" class="fade-in-section">
+    <p class="section__text__p1">What People Say</p>
+    <h1 class="title">Testimonials</h1>
+    <div class="testimonials-container">
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Anas delivered our WordPress LMS project on time and exceeded expectations. Clean code, great communication throughout."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">RK</div>
+          <div>
+            <h4>Rahul Kumar</h4>
+            <span>EdTech Startup, Ranchi</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Very skilled with ReactJS and Flutter. The BMI app he built was smooth, well-designed, and delivered ahead of schedule."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SP</div>
+          <div>
+            <h4>Sneha Patel</h4>
+            <span>Freelance Client</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★☆</div>
+        <p class="testimonial-text">"Great problem-solver and fast learner. Anas helped us debug a complex JavaScript issue that had stumped our whole team."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">AM</div>
+          <div>
+            <h4>Aditya Mehta</h4>
+            <span>Team Lead, Web Agency</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="fade-in-section">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email" class="icon contact-icon email-icon" />
+        <p><a href="mailto:anasansari620@gmail.com" target="_blank">anasansari620@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/md-anas-ansari/" target="_blank">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#timeline">Journey</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2026 Md Anas Ansari. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
